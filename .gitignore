@@ -1,0 +1,10 @@
+# Development
+.vscode
+.fleet
+.idea
+
+# Node
+node_modules
+
+# Build
+dist
