@@ -83,6 +83,14 @@ npm i
 # In tsconfig.json Add "emitDeclarationOnly": true
 # In tsconfig.json Add "declaration": true
 # In tsconfig.json Add "declarationDir": "lib"
+
+# In package.json Add
+#  "scripts": {
+#    "build:types": "tsc",
+#    "build:vite": "vite build",
+#    "build": "npm run build:vite && npm run build:types",
+#    "build:watch": "npm run build:vite -- --watch"
+#  },
 ```
 
 Using the ui package in app
@@ -94,6 +102,26 @@ Using the ui package in app
 
 # In /src/App.tsx Add
 #  import {Component} from "ui";
+```
+
+Add HMR
+```bash 
+# If you want to use HMR, just run "npm run build:watch"
+```
+
+Add HMR for typescript types
+```bash 
+# In tsconfig.json Update
+#  "declarationDir": "types"
+
+# In package.json Update
+#  "scripts": {
+#    "build:vite:watch": "npm run build:vite -- --watch",
+#    "build:types:watch": "tsc -w"
+#  },
+
+# In package.json Update
+#  "types": "./types/index.d.ts",
 ```
 
 Notice how only one `node_modules` folder is created.

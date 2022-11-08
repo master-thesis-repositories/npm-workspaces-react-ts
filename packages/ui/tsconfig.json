@@ -16,7 +16,7 @@
     "jsx": "react-jsx",
     "emitDeclarationOnly": true,
     "declaration": true,
-    "declarationDir": "lib"
+    "declarationDir": "types"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

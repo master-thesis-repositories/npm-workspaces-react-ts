@@ -4,7 +4,7 @@ import {Component} from "ui";
 const App = () => {
   return <span>
     <span>App</span>
-    <Component/>
+    <Component value={"test"} />
   </span>
 }
 
